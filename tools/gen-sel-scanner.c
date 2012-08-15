@@ -47,6 +47,7 @@ typedef int16_t flex_int16_t;
 typedef uint16_t flex_uint16_t;
 typedef int32_t flex_int32_t;
 typedef uint32_t flex_uint32_t;
+typedef uint64_t flex_uint64_t;
 #else
 typedef signed char flex_int8_t;
 typedef short int flex_int16_t;
@@ -358,7 +359,7 @@ static void yy_fatal_error (yyconst char msg[]  );
  */
 #define YY_DO_BEFORE_ACTION \
 	(yytext_ptr) = yy_bp; \
-	yyleng = (size_t) (yy_cp - yy_bp); \
+	yyleng = (yy_size_t) (yy_cp - yy_bp); \
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
@@ -608,7 +609,7 @@ static char *gensel_strdup(const char *str)
 	return new_str;
 }
 
-#line 612 "gen-sel-scanner.c"
+#line 613 "gen-sel-scanner.c"
 
 #define INITIAL 0
 
@@ -791,7 +792,7 @@ YY_DECL
 #line 87 "gen-sel-scanner.l"
 
 
-#line 795 "gen-sel-scanner.c"
+#line 796 "gen-sel-scanner.c"
 
 	if ( !(yy_init) )
 		{
@@ -1040,7 +1041,7 @@ YY_RULE_SETUP
 #line 136 "gen-sel-scanner.l"
 ECHO;
 	YY_BREAK
-#line 1044 "gen-sel-scanner.c"
+#line 1045 "gen-sel-scanner.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
